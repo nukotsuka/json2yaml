@@ -67,7 +67,7 @@ String _formatValue(dynamic value, int nesting, YamlStyle style) {
 
 String _formatList(List<dynamic> list, int nesting, YamlStyle style) => list
     .map((dynamic value) =>
-        '${_indentation(nesting)}-${_formatValue(value, nesting + 2, style)}')
+        '${_indentation(nesting)}-${_formatValue(value, nesting, style)}')
     .join('\n');
 
 String _indentation(int nesting) => _spaces(nesting * 2);
