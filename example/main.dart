@@ -38,7 +38,38 @@ void main() {
       'python': 'Elite',
       'pascal': 'Lame',
     },
-    'education': '4 GCSEs\n3 A-Levels\nBSc in the Internet of Things'
+    'education': '4 GCSEs\n3 A-Levels\nBSc in the Internet of Things',
+    'nestedDataList': [
+      {'id': 1, 'name': 'john'},
+      {'id': 2, 'name': 'bob'},
+      {
+        'id': 3,
+        'name': {'first': 'gnu', 'last': 'king'}
+      },
+      {
+        'id': 4,
+        'name': 'po',
+        'families': [
+          {'id': 5, 'name': 'nick'},
+          {'id': 6, 'name': 'differ'},
+        ]
+      },
+    ],
+    'nestedList': [
+      1,
+      2,
+      3,
+      [
+        4,
+        5,
+        6,
+        [7, 8, 9],
+        [10, 11]
+      ],
+      [12],
+      13,
+      14,
+    ]
   };
 
   print(json2yaml(developerData));
