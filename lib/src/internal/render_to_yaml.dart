@@ -27,13 +27,20 @@
 import 'package:json2yaml/json2yaml.dart';
 
 String renderToYaml(
-  Map<String, dynamic> json,
+  dynamic json,
   int nestingLevel,
   YamlStyle style,
-) =>
-    json.entries
+) {
+  if (json is Map<String, dynamic>) {
+    return json.entries
         .map((entry) => _formatEntry(entry, nestingLevel, style))
         .join('\n');
+  }
+  if (json is List<dynamic>) {
+    return _formatList(json, nestingLevel, style);
+  }
+  return '';
+}
 
 String _formatEntry(
   MapEntry<String, dynamic> entry,

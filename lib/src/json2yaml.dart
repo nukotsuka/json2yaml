@@ -33,7 +33,7 @@ enum YamlStyle {
 
 /// Converts JSON to YAML representation
 String json2yaml(
-  Map<String, dynamic> json, {
+  dynamic json, {
   YamlStyle yamlStyle = YamlStyle.generic,
 }) =>
     renderToYaml(json, 0, yamlStyle);

@@ -73,4 +73,12 @@ void main() {
   };
 
   print(json2yaml(developerData));
+
+  const jsonList = [
+    {'name': 'kitty', 'job': 'police'},
+    {'name': 'sliver', 'job': 'tennis player'},
+    {'name': 'glen', 'job': 'trimmer'},
+  ];
+
+  print(json2yaml(jsonList));
 }
