@@ -24,8 +24,8 @@
 
 import 'dart:convert';
 
+import 'package:flutter_test/flutter_test.dart';
 import 'package:json2yaml/json2yaml.dart';
-import 'package:test/test.dart';
 import 'package:yaml/yaml.dart';
 
 void main() {
